@@ -8,16 +8,16 @@ import kata09.checkout.RuleException;
 
 public class RegularPriceTest {
 
-	@Test
-	public void testForProduct() throws Exception {
-		RegularPrice price = new RegularPrice();
-		price.add("A", 10);
-		assertThat(price.forProduct("A")).isEqualTo(10);
-	}
+    @Test
+    public void testForProduct() throws Exception {
+        RegularPrice price = new RegularPrice();
+        price.add("A", 10);
+        assertThat(price.forProduct("A")).isEqualTo(10);
+    }
 
-	@Test(expected = RuleException.class)
-	public void testForProductNotStored() throws Exception {
-		RegularPrice price = new RegularPrice();
-		assertThat(price.forProduct("A")).isEqualTo(10);
-	}
+    @Test(expected = RuleException.class)
+    public void testForProductNotStored() throws Exception {
+        RegularPrice price = new RegularPrice();
+        assertThat(price.forProduct("A")).isEqualTo(10);
+    }
 }
