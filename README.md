@@ -1,6 +1,8 @@
 # Kata09: Back to the Checkout - Java
 About kata: http://codekata.com/kata/kata09-back-to-the-checkout/
 
+[![Build state](https://travis-ci.org/sergej-samsonow/kata09-checkout-java.svg)](https://travis-ci.org/sergej-samsonow/kata09-checkout-java)
+
 Die Schwierigkeit bei dem Entwurf von diesen System liegt erstens: Bei großen Varianz wie ein Preisangebot für ein Produkt oder Produktgruppe formuliert werden kann und zweitens in hohen Änderungsfrequenz von dieser Logik.
 
 Folgende Architektur wir vorgeschlagen - das System wir in drei Bereiche aufgesplittet:
