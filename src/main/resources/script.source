@@ -1,0 +1,17 @@
+// check passed objects are valid
+// https://docs.oracle.com/javase/7/docs/technotes/guides/scripting/programmer_guide/
+// https://docs.oracle.com/javase/8/docs/technotes/guides/scripting/nashorn/api.html
+// http://winterbe.com/posts/2014/04/05/java8-nashorn-tutorial/
+function calculate(context) {
+	var regularPrice   = context.get('regularPrice');
+	var specialPrice   = context.get('specialPrice');
+	var totalPrice     = context.get('totalPrice');
+
+	var amounts = specialPrice.groupProducts(context.get('products'));
+	for (var i = 0; i < amounts.length; i ++) {
+		var amount_for = amounts[i];
+		for (var product in amount_for) {
+			totalPrice.add(specialPrice.forProduct(product, amount_for[product], regularPrice.forProduct(product)));
+		}
+	}
+}
